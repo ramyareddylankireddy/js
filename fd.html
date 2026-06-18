@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FD Calculator</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 40px;
+    }
+    input, select, button {
+      padding: 8px;
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>Fixed Deposit Calculator</h2>
+
+<label>Principal Amount (₹):</label>
+<input type="number" id="amount"><br>
+
+<label>Interest Rate (%):</label>
+<input type="number" id="rate"><br>
+
+<label>Tenure (Years):</label>
+<input type="number" id="years"><br>
+
+<label>Compounding:</label>
+<select id="compound">
+  <option value="4">Quarterly</option>
+  <option value="12">Monthly</option>
+  <option value="1">Yearly</option>
+</select><br>
+
+<button onclick="calculateFD()">Calculate</button>
+
+<h3 id="result"></h3>
+
+<script>
+function calculateFD() {
+  let P = Number(document.getElementById("amount").value);
+  let R = Number(document.getElementById("rate").value);
+  let T = Number(document.getElementById("years").value);
+  let N = Number(document.getElementById("compound").value);
+
+  let maturity = P * Math.pow((1 + R/(100*N)), N*T);
+  let interest = maturity - P;
+
+  document.getElementById("result").innerHTML =
+    "Interest: ₹" + interest.toFixed(2) +
+    "<br>Maturity Amount: ₹" + maturity.toFixed(2);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+nav{
+    background:#000;
+    color:#fff;
+    padding:15px;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    padding:40px;
+    background:#f5f5f5;
+}
+
+.hero img{
+    width:220px;
+    height:280px;
+    object-fit:cover;
+}
+
+.content{
+    max-width:500px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background:#0b5d4d;
+    color:white;
+    text-decoration:none;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.card{
+    padding:40px 20px;
+    text-align:center;
+    color:white;
+}
+
+.black{background:#000;}
+.gray{background:#777;}
+.light{background:#eee;color:black;}
+.green{background:#63d6b2;color:black;}
+</style>
+</head>
+<body>
+
+<nav>
+    <h3>Your Name</h3>
+    <a href="#">Home</a>
+    <a href="#">Personal Development</a>
+    <a href="#">Experience</a>
+    <a href="#">Professional Development</a>
+    <a href="#">Academics</a>
+</nav>
+
+<section class="hero">
+    <img src="your-photo.jpg" alt="Profile Photo">
+
+    <div class="content">
+        <h2>Hi!</h2>
+        <p>
+            I am a student and web developer. Welcome to my portfolio.
+            Here you can find information about my experience,
+            projects, and academic background.
+        </p>
+
+        <a href="#" class="btn">Download Resume</a>
+    </div>
+</section>
+
+<section class="cards">
+    <div class="card black">
+        <h3>Personal Development</h3>
+        <p>Information about personal growth.</p>
+    </div>
+
+    <div class="card gray">
+        <h3>Experience</h3>
+        <p>Professional experience details.</p>
+    </div>
+
+    <div class="card light">
+        <h3>Professional Development</h3>
+        <p>Projects and achievements.</p>
+    </div>
+
+    <div class="card green">
+        <h3>Academics</h3>
+        <p>Education and certifications.</p>
+    </div>
+</section>
+
+</body>
+</html>

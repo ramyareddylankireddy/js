@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FD Calculator</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f2f2f2;
+    text-align:center;
+}
+
+.box{
+    background:white;
+    width:300px;
+    margin:50px auto;
+    padding:20px;
+    border-radius:10px;
+}
+
+input, button{
+    width:90%;
+    padding:10px;
+    margin:8px;
+}
+
+button{
+    background:green;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>FD Calculator</h2>
+
+<input id="p" type="number" placeholder="Principal Amount">
+
+<input id="r" type="number" placeholder="Interest Rate %">
+
+<input id="t" type="number" placeholder="Time (Years)">
+
+<button onclick="fd()">Calculate</button>
+
+<h3 id="ans"></h3>
+
+</div>
+
+
+<script>
+
+function fd(){
+
+let p = document.getElementById("p").value;
+let r = document.getElementById("r").value;
+let t = document.getElementById("t").value;
+
+let amount = p * Math.pow((1 + r/100), t);
+
+let interest = amount - p;
+
+document.getElementById("ans").innerHTML =
+"Interest: ₹" + interest.toFixed(2) +
+"<br>Maturity: ₹" + amount.toFixed(2);
+
+}
+
+</script>
+
+</body>
+</html>
